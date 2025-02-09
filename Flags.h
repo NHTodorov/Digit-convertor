@@ -1,17 +1,19 @@
-#pragma once
-#include <cctype>
 #include <string>
 #include <iostream>
+#include <cctype>
 
-// FLAGS TO CHECK STATEMENTS IN FUNCTIONS
+// FLAGS TO HELP FUNCTIONS
 //
-// flag to check if string empty and if string contains non digit characters
-bool NumbersOnly(std::string input) {
+// flag to check if string empty 
+bool Empty(std::string input) {
     if (input.empty()) {
         std::cout << "Error, empty string! " << std::endl;
         return false;
     }
-
+    return true;
+}
+// flag to check if non-digit character inputed
+bool NumbersOnly(std::string input) {
     for (char character : input) {
         if (!isdigit(character)) {
             std::cout << "Error, cannot convert characters! " << std::endl;
@@ -22,7 +24,7 @@ bool NumbersOnly(std::string input) {
 }
 
 // flag to check if valid input of hexadecimal letter A-F
-bool ValidInput(std::string input) {
+bool ValidHexa(std::string input) {
     for (char pattern : input) {
         pattern = std::toupper(pattern); // become capital letter
 
