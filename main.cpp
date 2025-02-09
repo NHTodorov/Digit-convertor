@@ -21,11 +21,13 @@ int main() {
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             std::cout << "Invalid input! " << std::endl;
+            std::cout << std::endl;
             continue;
         }
 
         if (choice < 0 || choice > 6) {
             std::cout << "Invalid choice! " << std::endl;
+            std::cout << std::endl;
             continue;
         }
 
